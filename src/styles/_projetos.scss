@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Iceland", sans-serif;
+    color: white;
+}
+
+body{
+    background-color: black;
+}
+
+.bordabaixo {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+    margin-bottom: 100px;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+
+    &--flex {
+        display: flex;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 28px;
+        padding: 16px 0;
+
+        &__title {
+            text-decoration: none;
+            color: #317D3A;
+        }
+
+        &--interaction {
+            padding-left: 1.5vw;
+            text-decoration: none;
+            color: #317D3A;
+        }
+    }
+}
+
+section {
+    .content {
+        .sidebar {
+            position: static;
+            display: flex;
+            justify-content: center;
+
+            .container {
+                &--nav {
+                    display: flex;
+                    justify-content: center;
+                    
+                    .nav {
+                        &--lateral {
+                            position: fixed;
+                            top: 100px;
+
+                            &__direito {
+                                h1 {
+                                    text-align: center;
+                                }
+
+                                p {
+                                    margin: 50px 20%;
+                                }
+                            }
+                        }
+        
+                        &__img {
+                            width: 200px;
+                            height: 200px;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+
+        .projetos {
+            border-left: 1px solid rgba(255, 255, 255, 0.13);
+            border-right: 1px solid rgba(255, 255, 255, 0.13);
+
+            &__projeto {
+
+                margin-bottom: 30px;
+
+                &--miniatura {
+                    max-width: 500px;
+                    width: 100%;
+
+                    button {
+                        width: 100%;
+                        border-radius: 0px 0px 5px 5px;
+                        background-color: #317D3A;
+                        border: 1px solid #317D3A;
+                        color: black;
+
+                        &:hover {
+                            color: #317D3A;
+                            background-color: black;
+                        }
+                    }
+                    img {
+                        width: 100%;
+                        height: 250px;
+                        object-fit: cover;
+                        border-radius: 5px 5px 0px 0px;
+                    }
+                }
+            }
+        }
+
+        .descricao {
+            display: flex;
+            justify-content: center;
+            position: sticky;
+        }
+    }
+}
